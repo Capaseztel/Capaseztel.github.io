@@ -1,0 +1,32 @@
+* {
+    text-decoration: none;
+    font-family: "DM Mono", monospace;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table, th, td {
+    padding: 10px;
+    text-align: center;
+    background-color: #e4f1c3;
+    border-radius: 10px;
+}
+
+td {
+    border: 2px solid black;
+    background-color: rgb(222, 239, 253);
+}
+
+th {
+    border: 2px solid black;
+    background-color: rgb(167, 214, 255);
+}

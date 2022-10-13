@@ -1,48 +1,131 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    background-color: #006a9b;
+    font-family: "DM Mono", monospace;
 }
 
-html, body {
-    height: 100%;
-}
-
-body {
-    font-family: "DM Mono", sans-serif;
-    font-weight: 400;
-}
-
-.container {
-    height: 100%;
+.topnav {
+    height: 6%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 7px 11px #11375a;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
+.topnav, .noact{
+    background-color: #00598c;
 }
 
-.btn {
-    text-decoration: none;
-    padding: 20px 50px;
-    font-size: 1.25rem;
-    position: relative;
-    margin: 32px;
-}
-
-/* Button 1 */
-
-.btn-1 {
-    background: #000;
-    color: #fff;
+.noact {
+    padding: 1% 6%;
+    text-align: center;
+    border: 3px solid #00a2ff;
     border-radius: 30px;
+    float: left;
+    display: block;
+    color: #fff;
+    margin: 2%;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
 
-.btn-1::after, .btn-1::before {
+.active {
+    text-decoration: none;
+    background-color: #185070;
+    padding: 1% 6%;
+    text-align: center;
+    border: 3px solid #11375a;
+    border-radius: 30px;
+    float: left;
+    display: block;
+    color: #fff;
+    margin: 2%;
+    cursor: not-allowed;
+}
+
+.active:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+.noact:hover {
+    transform: translate(-6px , -6px);
+    background-color: #293472;
+}
+
+@keyframes shake {
+    10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+    transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+    transform: translate3d(4px, 0, 0);
+    }
+}
+
+
+/* main content */
+.title {
+    text-align: center;
+    color: #579ec7;
+    font-size: 50px;
+    margin: 5%;
+    text-shadow: 3px 3px 3px #000;
+}
+
+.main-content {
+    align-content: center;
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1%;
+    background-color: #005279;
+}
+
+.main-content p, .main-content p a, .btn {
+    background-color: #11375a;
+}
+
+.main-content p {
+    color: #fff;
+    border-radius: 10px;
+    margin: 9px;
+    padding: 1.2%;
+}
+
+.main-content p a {
+    color: #00a2ff;
+    text-decoration: none;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    background-color: #005279;
+}
+
+.btn {
+    color: #fff;
+    text-decoration: none;
+    padding: 2% 4%;
+    margin: 6px;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.btn::after, .btn::before {
     content: "";
     position: absolute;
     opacity: 0.3;
@@ -56,72 +139,14 @@ body {
     transition: transform 0.3s ease;
 }
 
-.btn-1:hover {
-    transform: translate(-12px, -12px);
+.btn:hover {
+    transform: translate(-6px, -6px);
 }
 
-.btn-1:hover::after{
+.btn:hover::after{
+    transform: translate(3px, 3px);
+}
+
+.btn:hover::before{
     transform: translate(6px, 6px);
-}
-
-.btn-1:hover::before{
-    transform: translate(12px, 12px);
-}
-
-/* Button 2 */
-
-.btn-2 {
-    color: #000;
-}
-
-.btn-2::after, .btn-2::before {
-    border: 3px solid #000;
-    content: "";
-    position: absolute;
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: transform 0.3s ease;
-}
-
-.btn-2:hover::after {
-    transform: translate(-5px, -5px);
-}
-
-.btn-2:hover::before {
-    transform: translate(5px, 5px);
-}
-
-/* Button 3 */
-
-.btn-3 {
-    overflow: hidden;
-    color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-3::after {
-    content: "";
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    top: -50px;
-    left: -100px;
-    background-color: #ff3cac;
-    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
-    z-index: -1;
-    transition: transform 0.5s ease;
-}
-
-.btn-3:hover {
-    transform: translate(0px, -6px);
-    box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200, 255, 0.5);
-}
-
-.btn-3:hover::after {
-    transform: rotate(150deg);
 }
