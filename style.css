@@ -62,7 +62,7 @@
     display: flex;
 }
 
-.win, .winpro {
+.win, .winpro, .winlar {
     border-radius: 10px;
     margin: 0 auto;
     margin-top: 30px;
@@ -76,7 +76,11 @@
     height: 100px;
 }
 
-.win:hover, .winpro:hover {
+.winlar {
+    width: 95%;
+}
+
+.win:hover, .winpro:hover, .winlar:hover {
     transform: scale(1.05);
 }
 
@@ -98,12 +102,16 @@
     background-image: url("images/image2.jpg");
 }
 
+.image3 {
+    background-image: url("images/image3.png");
+}
+
 .text h1, p {
     margin-left: 20px;
     margin-top: 10px;
 }
 
-/* Windows */
+/* "Apps" */
 
 .win1 {
     background-color: #e45757;
@@ -116,19 +124,18 @@
 }
 
 .win3 {
-    background-color: #57e4b2;
-    box-shadow: 0px 5px 10px #48bd9b;
+    background-color: #57b2e4;
+    box-shadow: 0px 5px 10px #489bbd;
 }
 
 .win4 {
-    background-color: #57b2e4;
-    box-shadow: 0px 5px 10px #489bbd;
+    background-color: #57e4b2;
+    box-shadow: 0px 5px 10px #48bd9b;
 }
 
 .win5 {
     background-color: #b257e4;
     box-shadow: 0px 5px 10px #9b48bd;
-    width: 95%;
 }
 
 .content {
