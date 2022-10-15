@@ -24,12 +24,12 @@ body {
     backdrop-filter: blur(5px);
     position: relative;
     overflow: hidden;
-    padding: 150px 400px;
+    padding: 10vh 12vw;
     border-radius: 50px;
+    align-items: center;
 }
 
 .searchframe h1 {
-    margin: 0 auto;
     font-size: 6em;
     text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
 }
@@ -40,7 +40,7 @@ body {
     background-color: #eee;
     padding: 10px;
     border-radius: 50px;
-    margin: 30px auto;
+    margin: 30px;
     width: 30vw;
     height: 4vh;
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
@@ -51,7 +51,6 @@ body {
 }
 
 .searchframe a {
-    margin: 0 auto;
     padding: 12px 42px;
     border-radius: 50px;
     color: white;
