@@ -43,11 +43,18 @@ body {
     margin: 30px;
     width: 30vw;
     height: 4vh;
+    outline: none;
     box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
 .searchframe input:hover {
     background-color: #ccc;
+}
+
+.searchframe input:focus {
+    border-color: #888;
+    transform: scale(1.05);
 }
 
 .searchframe a {
@@ -64,4 +71,8 @@ body {
     transform: scale(1.1);
     background-color: #fff;
     color: #000;
+}
+
+.searchframe a:active {
+    transform: scale(0.9);
 }
