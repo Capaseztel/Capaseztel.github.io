@@ -95,3 +95,7 @@ body {
     margin: 0 2rem;
     font-size: 1.2rem;
 }
+
+.check input:hover {
+    transform: translate(0, -5px);
+}
