@@ -98,4 +98,5 @@ body {
 
 .check input:hover {
     transform: translate(0, -5px);
+    cursor: pointer;
 }
