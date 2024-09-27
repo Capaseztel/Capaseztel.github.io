@@ -50,6 +50,10 @@ body {
     justify-content: center;
 }
 
+#WIP-Alert {
+    margin: 10px 50px;
+}
+
 /* Responsiveness */
 @media (max-width: 668px) {
     #logo {
