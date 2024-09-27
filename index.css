@@ -62,7 +62,7 @@ body {
     margin-top: 20px;
 }
 
-cardRow {
+#cardRow {
     display: flex;
     flex-direction: row;
 }
@@ -75,5 +75,9 @@ cardRow {
 
     .info {
         font-size: 1.2em;
+    }
+
+    #cardRow {
+        flex-direction: column;
     }
 }
