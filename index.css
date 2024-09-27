@@ -50,8 +50,21 @@ body {
     justify-content: center;
 }
 
-#WIP-Alert {
-    margin: 10px 50px;
+#myAlert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#myAlert, #myAlert2 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+cardRow {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Responsiveness */
