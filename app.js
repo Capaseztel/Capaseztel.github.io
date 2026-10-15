@@ -6,8 +6,20 @@ $("#year").textContent = new Date().getFullYear();
 
 // Nav móvil + scroll
 const links = $("#navLinks");
-$("#burger").addEventListener("click", () => links.classList.toggle("open"));
-links.addEventListener("click", (e) => { if (e.target.tagName === "A") links.classList.remove("open"); });
+const burger = $("#burger");
+burger.addEventListener("click", () => {
+  links.classList.toggle("open");
+  burger.classList.toggle("active");
+});
+links.addEventListener("click", (e) => { if (e.target.tagName === "A") { links.classList.remove("open"); burger.classList.remove("active"); } });
+document.addEventListener("click", (e) => {
+  if (!links.classList.contains("open")) return;
+  if (e.target.closest("#navbar")) return;
+  links.classList.remove("open"); burger.classList.remove("active");
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") { links.classList.remove("open"); burger.classList.remove("active"); }
+});
 
 const prog = $("#progress");
 addEventListener("scroll", () => {
